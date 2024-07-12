@@ -1,0 +1,63 @@
+test data:
+	420774577453,13-01-2020 18:10:15,13-01-2020 18:12:57
+	420776562353,18-01-2020 08:59:20,18-01-2020 09:10:00
+	
+420774577453 -> 2 min 42 sec -> 162 sec -> (3 min - mimo interval) -> 1,50 Kč
+420776562353 -> 10 min 40 sec -> 640 sec -> (11 min - v,snizenaSazba) -> 6,20 Kč
+1,5+6,2 = 7,7 Kč - promo akce = 1,5 Kč
+
+
+FreeNumber:
+	420774577453,14-01-2020 08:59:20,14-01-2020 09:10:00
+	420774577453 -> 10 min 40 sec -> 640 sec
+	platí se pouze za 420776562353,18-01-2020 08:59:20,18-01-2020 09:10:00:
+		
+
+
+Minutová sazba v intervalu <8:00:00,16:00:00) je zpoplatněna 1 Kč za každou započatou minutu. 
+Mimo uvedený interval platí snížená sazba 0,50 Kč za každou započatou minutu. 
+Pro každou minutu hovoru je pro stanovení sazby určující čas započetí dané minuty.
+
+mezi <8:00 - 16:00) 1 Kč per min.
+mezi <16:00 - 8:00) 0,50 Kč per min.
+
+Pro každou minutu hovoru je pro stanovení sazby určující čas započetí dané minuty.
+	hovor: 7:59 a končí v 8:02 -> 3min -> 180 sec
+		7:59:00 - 8:00:00 -> před 8:00 -> 0,50 Kč
+		8:00:00 - 8:01:00 -> v 8:00 -> 1 Kč
+		8:01:00 - 8:02:00 -> v 8:01 -> 1 Kč
+			Celková cena hovoru: 2,50 Kč
+	
+
+	
+Mimo interval = 0,50 Kč
+interval = 1 kč
+snížená sazba = 0,20 Kč 
+>5 min = free
+	
+08:59:20 - 09:00:00 (40 sekund): Začíná v intervalu 	(sazba 1,00 Kč)
+09:00:00 - 09:01:00 (60 sekund): Začíná v intervalu 	(sazba 1,00 Kč)
+09:01:00 - 09:02:00 (60 sekund): Začíná v intervalu 	(sazba 1,00 Kč)
+09:02:00 - 09:03:00 (60 sekund): Začíná v intervalu 	(sazba 1,00 Kč)
+09:03:00 - 09:04:00 (60 sekund): Začíná v intervalu 	(sazba 1,00 Kč)
+09:04:00 - 09:05:00 (60 sekund): Začíná v intervalu 	(snížená sazba 0,20 Kč)
+09:05:00 - 09:06:00 (60 sekund): Začíná v intervalu 	(snížená sazba 0,20 Kč)
+09:06:00 - 09:07:00 (60 sekund): Začíná v intervalu 	(snížená sazba 0,20 Kč)
+09:07:00 - 09:08:00 (60 sekund): Začíná v intervalu 	(snížená sazba 0,20 Kč)
+09:08:00 - 09:09:00 (60 sekund): Začíná v intervalu 	(snížená sazba 0,20 Kč)
+09:09:00 - 09:10:00 (60 sekund): Začíná v intervalu 	(snížená sazba 0,20 Kč)
+														5
+														1 (5x0,20)
+														0,20
+														6,20 Kč
+														
+														
+														
+-	V rámci promo akce operátora dále platí, že hovory na nejčastěji volané číslo v rámci výpisu nebudou zpoplatněny. 
+V případě, že by výpis obsahoval dvě nebo více takových čísel, 
+zpoplatněny nebudou hovory na číslo s aritmeticky nejvyšší hodnotou
+
+nejvyšší   
+
+420774577453,13-01-2020 18:10:15,13-01-2020 18:12:57 < 420776562353,18-01-2020 08:59:20,18-01-2020 09:10:00
+1,5 = 1,5 Kč
